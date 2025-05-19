@@ -1,68 +1,73 @@
-package api.devwork.migration.domain.response;
+package api.devwork.migration.domain.request;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
-@Builder
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class MigrationExampleResponse {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ResourceMigrationRequest {
 
-    private Integer selectedTaskId;
-    private List<MigrationPlanResult> migrationPlans;
+    private MigrationPlanBundle migrationPlanBundle;
 
     @Getter
     @Setter
-    @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class MigrationPlanResult {
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public static class MigrationPlanBundle {
 
-        private Long recordedAt;
-        private Integer taskId;
-        private String sourceId;
-        private Double stabilityScore;
-        private Double previousScore;
-        private Double costEstimate;
-        private String status;
-        private String finalStatus;
-        private Integer totalVmCount;
-        private List<HostResourceUsage> hosts;
+        private List<MigrationPlan> plans;
+        private List<HostResourceStatus> hosts;
         private List<MigrationDetail> details;
 
         @Getter
-        @Setter
         @Builder
         @NoArgsConstructor
         @AllArgsConstructor
-        public static class HostResourceUsage {
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public static class MigrationPlan {
             private Integer taskId;
             private String sourceId;
-            private String hostName;
-            private Integer instanceGrowth;
-            private Integer cpuGrowthRate;
-            private Integer memoryGrowthRate;
-            private Integer runningVms;
-            private Integer cpuUsed;
-            private Integer cpuRemaining;
-            private Integer memoryUsed;
-            private Integer memoryRemaining;
+            private Double stabilityScore;
+            private Double previousScore;
+            private Double estimatedCost;
+            private Integer totalVmCount;
+            private Long recordedAt;
         }
 
         @Getter
         @Builder
         @NoArgsConstructor
         @AllArgsConstructor
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public static class HostResourceStatus {
+            private Integer taskId;
+            private String sourceId;
+            private String hostName;
+            private Integer runningVms;
+            private Integer cpuUsed;
+            private Integer cpuRemaining;
+            private Integer memoryUsed;
+            private Integer memoryRemaining;
+            private Long recordedAt;
+        }
+
+        @Getter
+        @Builder
+        @NoArgsConstructor
+        @AllArgsConstructor
+        @JsonInclude(JsonInclude.Include.NON_NULL)
         public static class MigrationDetail {
             private String sourceId;
             private Integer taskId;
             private String fromHost;
             private String toHost;
-            private String status;
-            private String finalStatus;
             private String vmUuid;
             private String vmName;
             private Integer vmCpu;
