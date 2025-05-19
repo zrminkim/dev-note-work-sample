@@ -1,4 +1,4 @@
 package api.devwork.migration.domain.response;
 
-public class OpenSearchConsolidationVmResponse {
+public class OpenSearchVmExampleResponse {
 }

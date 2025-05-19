@@ -1,2 +1,4 @@
-package api.devwork.migration.wirte.port.in;public class WriteMigrationExampleUseCase {
+package api.devwork.migration.wirte.port.in;
+
+public class WriteMigrationExampleUseCase {
 }

@@ -1,2 +1,4 @@
-package api.devwork.migration.domain;public enum MigrationStatus {
+package api.devwork.migration.domain;
+
+public enum MigrationStatus {
 }

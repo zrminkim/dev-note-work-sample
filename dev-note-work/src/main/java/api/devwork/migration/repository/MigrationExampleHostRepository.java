@@ -1,2 +1,4 @@
-package api.devwork.migration.repository;public interface MigrationExampleHostRepository {
+package api.devwork.migration.repository;
+
+public interface MigrationExampleHostRepository {
 }

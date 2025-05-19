@@ -1,4 +1,4 @@
 package api.devwork.migration.read.adapter.in;
 
-public class ReadMigrationResourceController {
+public class ReadMigrationController {
 }

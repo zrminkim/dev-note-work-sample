@@ -1,4 +1,4 @@
-package api.devwork.migration.wirte.adapter;
+package api.devwork.migration.wirte.adapter.in;
 
-public class SaveMigrationExampleResourceController {
+public class SaveMigrationExampleController {
 }

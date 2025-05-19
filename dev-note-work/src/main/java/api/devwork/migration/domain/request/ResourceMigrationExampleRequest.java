@@ -1,4 +1,4 @@
 package api.devwork.migration.domain.request;
 
-public class ResourceOptimizeRequest {
+public class ResourceMigrationExampleRequest {
 }

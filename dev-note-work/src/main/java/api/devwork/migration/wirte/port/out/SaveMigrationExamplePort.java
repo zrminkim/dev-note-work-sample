@@ -1,2 +1,4 @@
-package api.devwork.migration.wirte.port;public interface SaveMigrationExamplePort {
+package api.devwork.migration.wirte.port.out;
+
+public interface SaveMigrationExamplePort {
 }

@@ -1,2 +1,4 @@
-package api.devwork.migration.entity;public class MigrationExampleDetailEntity {
+package api.devwork.migration.entity;
+
+public class MigrationExampleDetailEntity {
 }

@@ -1,2 +1,4 @@
-package api.devwork.migration.wirte.application;public class SaveMigrationExampleApplication {
+package api.devwork.migration.wirte.application;
+
+public class SaveMigrationExampleApplication {
 }
